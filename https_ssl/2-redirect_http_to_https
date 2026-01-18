@@ -10,7 +10,7 @@ defaults
 frontend http_front
     bind *:80
     redirect scheme https code 301 if !{ ssl_fc }
-    bind *:443 ssl crt /etc/ssl/private/haproxy.pem
+    bind *:443 ssl crt /etc/letsencrypt/live/www.odame.tech/odame.pem
     default_backend http_back
 
 backend http_back
